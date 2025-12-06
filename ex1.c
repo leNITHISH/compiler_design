@@ -55,8 +55,8 @@ int main() {
 	printf("+-----------------+-----------------+-----------------+\n");
 	printf("|     Keywords    |   Identifiers   |  Special Chars  |\n");
 	printf("|-----------------+-----------------+-----------------|\n");
-	int max = s_idx>k_idx?s_idx:(k_idx>i_idx?k_idx:i_idx);
-
+	int max = (i_idx>s_idx)?i_idx:s_idx;
+	max = (k_idx>max)?k_idx:max;
 	for(int i=0; i<max; i++)
 		printf("| %-15s | %-15s | %-15c |\n",
 		       (i<k_idx)?kew[i]:"",
